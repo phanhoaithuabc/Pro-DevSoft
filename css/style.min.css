@@ -239,6 +239,7 @@ img.captcha-image {
 #logo a {
   display: block;
   font-size: 7px;
+  color: red;
   letter-spacing: 2px;
   line-height: 31px;
   padding-left: 128px;
@@ -610,10 +611,12 @@ img.captcha-image {
   display: block !important;
 }
 #logo {
-  background-image: url(../images/logo.jpg);
+  background-image: url(../images/logo.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  background-color: white;
+  border-radius: 10px;
 }
 
 #nav .sub-menu li a, #nav2 {
@@ -2613,8 +2616,9 @@ span.page_nav {
     background: 0 0
   }
   #logo a {
-    background-image: url(../images/bgheader.png);
+    /*background-image: url(../images/logo.jpg);*/
     background-position: -232px 0
+    color:black;
   }
   .container {
     width: 100%
@@ -2677,10 +2681,11 @@ span.page_nav {
     background: 0 0
   }
   #logo a {
-    background-image: url(../images/bgheader.png);
+    background-image: url(../images/logo.jpg);/*bgheader*/
     background-position: -162px 0;
     display: block;
     width: 100%;
+    color: black;
     font-size: 0
   }
   #nav, #nav li, #page-info .info .dinfo {
