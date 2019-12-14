@@ -24,7 +24,17 @@
         ?>
        <div class="container">
             <div class="row" id="search-user">
-                
+                <form method="post">
+                    <div class="row">
+                       <div class="col-md-1"></div>
+                        <div class="col-md-7">
+                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search film for name, director, actor,..." name="qry">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-lg btn-primary" type="submit" name="button_search" style="padding: 8px">Search</button>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="row" id="list-user">
                 <div class="col-md-1"></div>
@@ -65,6 +75,10 @@
                                         <th> <?php echo $row["director"] ?> </th>
                                         <th> <?php echo $row["actor"] ?> </th>
                                         <th> <?php echo $row["description"] ?> </th>
+                                        <td>
+                                            <button type="button" class="btn btn-info" name="edit" onclick="edit(this)">Edit</button>
+                                            <button type="button" class="btn btn-danger" name="delete" onclick="del(this)">Delete</button>
+                                        </td>
                                     </tr>
                                 <?php 
                                 }
@@ -81,5 +95,21 @@
             </div>
         </div>
     </div>
+    <script>
+        function edit(params) {
+                var tr = params.parentElement.parentElement;
+                var td0= tr.cells.item(0).innerHTML;
+                td0 = td0.replace(' ','' ); //id của user có space ???
+                location.href= "editFilm.php?id=" + td0;
+        };
+        function del(params) {
+            if(confirm("Bạn có chắc muốn xóa film này?")){
+                var tr = params.parentElement.parentElement;
+                var td0= tr.cells.item(0).innerHTML;
+                td0 = td0.replace(' ','' ); //id của user có space ???
+                location.href= "deleteFilm.php?id=" + td0;
+            }
+        };
+    </script>
 </body>
 </html>
