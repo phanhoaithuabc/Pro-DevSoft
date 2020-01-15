@@ -1,7 +1,7 @@
 <?php
-	$host = 'localhost';
-	$user = 'root';
-	$pass = '';
+	$host = 'sampledb.ctd6ewftgmo8.us-east-1.rds.amazonaws.com';
+	$user = 'admin';
+	$pass = '12345678';
 	$db = 'rapchieuphim';
 	//error_reporting(0);//Chan thong bao loi
 
