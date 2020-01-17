@@ -1,5 +1,5 @@
 <?php
-	$host = 'sampledb.ctd6ewftgmo8.us-east-1.rds.amazonaws.com';
+	$host = 'rapchieuphim.cjgnhgcoa3hk.us-east-1.rds.amazonaws.com';
 	$user = 'admin';
 	$pass = '12345678';
 	$db = 'rapchieuphim';
